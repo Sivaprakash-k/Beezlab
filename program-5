@@ -1,0 +1,14 @@
+from datetime import timedelta, date,datetime
+def daterange(start_date, end_date):
+    for n in range(int ((end_date - start_date).days)+1):
+        yield start_date + timedelta(n)
+start=input('start')
+end=input('end')
+st = datetime.strptime(start, '%d/%b/%Y')
+ed= datetime.strptime(end, '%d/%b/%Y')
+ans=0
+for i in daterange(st,ed):
+    if(i.weekday()==5 or i.weekday()==6):
+        ans+=1
+
+print(ans)
