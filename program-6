@@ -1,0 +1,5 @@
+time=input()
+h,m=map(int,time.split(":"))
+h_deg=h*30
+m_deg=m*6
+print(abs(h_deg-m_deg));
