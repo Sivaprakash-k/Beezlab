@@ -1,0 +1,16 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String str=sc.nextLine();
+	int length=str.length();
+	int count=0;
+	for(int index=0;index<length;index++){
+	    if(str.charAt(index)==' '){
+	        count++;
+	    }
+	}
+	System.out.print(length-count);
+	}
+}
